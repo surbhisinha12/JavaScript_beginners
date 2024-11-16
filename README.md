@@ -9,6 +9,6 @@ Every JavaScript beginners must practice this exrecises of JavaScript.
 Javascript, HTML
 ## How to Clone?
 
-Install my-project by cloning this project'repository
+Install my-project by cloning this project's repository
 
 
