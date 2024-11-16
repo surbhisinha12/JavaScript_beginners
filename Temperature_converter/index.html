@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        function convertToCentigrade(degFahren){
+             var degcent = (degFahren-32)*5/9 ;
+             return degcent;
+        }
+        var degFahren = [212, 32 , -459.15];
+        var degcent =[];
+        var loopcounter;
+        
+        for (loopcounter=0; loopcounter<=2; loopcounter++){
+            degcent[loopcounter]=convertToCentigrade(degFahren[loopcounter]);
+
+        }
+        for(loopcounter=2; loopcounter>=0; loopcounter--){
+            document.write("value" + loopcounter + "was" + degFahren[loopcounter]
+            + " degrees Fahrenheit");
+            document.write ("Which is" + degcent[loopcounter]+ " degrees centigrad<br/>")
+
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

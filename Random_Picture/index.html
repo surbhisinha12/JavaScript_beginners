@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+     
+    <p>
+        <label><input type="checkbox" id="checkbox"/>Checked</label>
+    </p>
+    <p>
+        <button onclick="handelClick()">Click me to see new picture </button>
+    </p>
+    <p>
+        <img id ="image" src = "https://w7.pngwing.com/pngs/505/5/png-transparent-bird-bird-animals-songbird-fauna-thumbnail.png" alt="Random Bird Image">
+    </p>
+   
+    <script>
+       var myImages = [
+        "https://w7.pngwing.com/pngs/505/5/png-transparent-bird-bird-animals-songbird-fauna-thumbnail.png",
+        "https://w7.pngwing.com/pngs/885/552/png-transparent-angry-birds-action-angry-birds-star-wars-angry-birds-2-angry-birds-pop-red-bird-the-angry-birds-movie-red-angry-bird-cartoons-cartoon-bird-thumbnail.png",
+        "https://w7.pngwing.com/pngs/473/272/png-transparent-bird-cartoon-blue-bird-animals-chicken-bird-thumbnail.png",
+        "https://w7.pngwing.com/pngs/65/123/png-transparent-bird-european-robin-birds-animals-songbird-fauna-thumbnail.png"
+       ];
+       function handelClick() {
+          //for checking the checkbox 
+          var checkbox = document.getElementById("checkbox");
+          checkbox.checked = !checkbox.checked;
+          // change the image 
+          changeImg()
+       }
+
+       function changeImg(){
+        var imgElement = document.getElementById("image");
+        var newImgNumber = Math.floor(Math.random() * myImages.length);
+
+        // checking for new img is selected or not 
+        while (imgElement.src === myImages[newImgNumber]){
+            var newImgNumber = Math.floor(Math.random() * myImages.length);
+        }
+
+        imgElement.src = myImages[newImgNumber];
+       }
+   </script>  
+</body>
+</body>
+</html>

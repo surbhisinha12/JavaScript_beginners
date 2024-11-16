@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number</title>
+</head>
+<body>
+<script>
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        let isGuessCorrect = false;
+        while (!isGuessCorrect){
+            const playerGuess = parseInt(prompt("Guess the number between 1 and 100:"));
+             if (isNaN(playerGuess) || playerGuess < 1 || playerGuess > 100) {
+             alert("Please enter a valid number between 1 and 100.");
+             continue;
+              }
+              attempts = attempts + 1;
+             if (playerGuess === randomNumber) {
+              isGuessCorrect = true;
+             alert(`Congratulations! You guessed the correct number (${randomNumber}) in ${attempts} attempts.`);
+             } else if (playerGuess < randomNumber) {
+               alert("Too low. Try again.");
+             } else {
+             alert("Too high. Try again.");
+             }
+            }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number </title>
+</head>
+<body>
+    <script>
+         var random_number = parseInt(prompt("Pick a  number between 1 and 100: "));
+           switch(true){
+                        case random_number>=1 && random_number <=30:
+                        case random_number>=31 && random_number <=50:
+                        document.write(" Too low ! ");
+                        break;
+                        case random_number>=51 && random_number <=70:
+                        document.write (" You are great but still you did not find the correct the number ");
+                        break;
+                        case random_number === 75:
+                        document.write (" Wow! you find the correct number");
+                        break;
+                        case random_number>75 && random_number<=100:
+                        document.write ("I think you have to go backward");
+                        break;
+                        case random_number<=80 && random_number>=76:
+                        document.write(" Nice take some steps backward ");
+                        break;
+                        default:
+                        document.write("You did not enter a number between 1 and 100. ");
+                        break;
+
+           }
+
+    </script>
+    
+</body>
+</html>
